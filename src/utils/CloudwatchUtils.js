@@ -1,5 +1,5 @@
 var AWS = require("aws-sdk");
-AWS.config.update({ region: "ap-southeast-2" /* process.env.REGION*/ });
+AWS.config.update({ region: "eu-central-1" /* process.env.REGION*/ });
 var cloudwatch = new AWS.CloudWatch();
 var jmespath = require("jmespath");
 
@@ -8,7 +8,7 @@ module.exports.putMetricData = async (params) => {
     const MetricDataRespose = await cloudwatch.putMetricData(params).promise();
     return MetricDataRespose;
   } catch (error) {
-    console.info("Unable to add Cloudwatch Metric :", error);
+    console.info("Unable to add Cloudwatch Metric:", error);
   }
 };
 
@@ -50,7 +50,7 @@ module.exports.putDashboard = async (params) => {
     const MetricDataRespose = await cloudwatch.putDashboard(params).promise();
     return MetricDataRespose;
   } catch (error) {
-    console.info("Unable to add Cloudwatch Dashboard :", error);
+    console.info("Unable to add Cloudwatch Dashboard:", error);
   }
 };
 
@@ -71,7 +71,7 @@ module.exports.tagAlarms = async (alarm) => {
     const TagResourceResponse = await cloudwatch.tagResource(params).promise();
     return TagResourceResponse;
   } catch (error) {
-    console.info("Unable to tag Cloudwatch Alarm :", error);
+    console.info("Unable to tag Cloudwatch Alarm:", error);
   }
 };
 
@@ -95,6 +95,6 @@ module.exports.getAlarmARNs = async (namespace) => {
     return filteredAlarmARNs;
   } catch (error) {
     console.error();
-    "Unable to retrieve Cloudwatch Alarms :", error;
+    "Unable to retrieve Cloudwatch Alarms:", error;
   }
 };

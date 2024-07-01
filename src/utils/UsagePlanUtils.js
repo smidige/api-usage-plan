@@ -1,5 +1,5 @@
 var AWS = require("aws-sdk");
-AWS.config.update({ region: "ap-southeast-2" /* process.env.REGION*/ });
+AWS.config.update({ region: "eu-central-1" /* process.env.REGION*/ });
 var apigateway = new AWS.APIGateway();
 
 module.exports.getUsagePlanDetails = async (params) => {
@@ -7,7 +7,7 @@ module.exports.getUsagePlanDetails = async (params) => {
     const usagePlanResponseData = await apigateway.getUsage(params).promise();
     return usagePlanResponseData;
   } catch (error) {
-    console.info("Unable to retrieve Usage plan quota :", error);
+    console.info("Unable to retrieve Usage plan quota:", error);
   }
 };
 

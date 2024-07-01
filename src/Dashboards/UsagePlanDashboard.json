@@ -10,7 +10,7 @@
         "sparkline": true,
         "view": "singleValue",
         "metrics": [],
-        "region": "ap-southeast-2",
+        "region": "eu-central-1",
         "title": "Remaining API requests by Key Name"
       }
     },

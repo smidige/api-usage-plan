@@ -73,13 +73,13 @@ var cwmetricdata = [
     namespace: "CAPI",
     name: "customer2",
     alarmARN:
-      "arn:aws:cloudwatch:ap-southeast-2:723002825476:alarm:Customer1APIKeyUsageAlarm",
+      "arn:aws:cloudwatch:eu-central-1:537359665894:alarm:Customer1APIKeyUsageAlarm",
   },
   {
     namespace: "CAPI",
     name: "customer3",
     alarmARN:
-      "arn:aws:cloudwatch:ap-southeast-2:723002825476:alarm:Customer 2 API Alarm",
+      "arn:aws:cloudwatch:eu-central-1:537359665894:alarm:Customer2APIKeyUsageAlarm",
   },
   {
     namespace: "CAPI",
